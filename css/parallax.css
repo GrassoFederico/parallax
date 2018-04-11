@@ -21,6 +21,7 @@ header,section,footer
 
 header
 {
+	position:fixed;
 	background-color: #aaa;
 }
 
@@ -29,7 +30,7 @@ section
 	background-color: #ccc;
 }
 
-section#over
+section#over1
 {
 	position: absolute;
 	top:100vh;
