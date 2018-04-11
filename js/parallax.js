@@ -18,18 +18,18 @@ function checkScroll(vScroll)
 function getSectionScroll()
 {
 	var tmpPositionScroll = $(this).scrollTop();
-	var tmpSectionTop = $("section#over"+i).css("top");
+	var tmpSectionTop = $("section#over").css("top");
 	var scrollValue;
 	
 	if(positionScroll < tmpPositionScroll)
 	{
 		scrollValue = parseInt(tmpSectionTop.split("px")[0]) - positionScroll;
-		$("section#over"+i).css("top",checkScroll(scrollValue) + "px");
+		$("section#over").css("top",checkScroll(scrollValue) + "px");
 	}
 	else
 	{
-		scrollValue = parseInt(tmpSectionTop.split("px")[0]) + positionScroll);
-		$("section#over"+i).css("top",checkScroll(scrollValue) + "px");
+		scrollValue = parseInt(tmpSectionTop.split("px")[0]) + positionScroll;
+		$("section#over").css("top",checkScroll(scrollValue) + "px");
 	}
 	
 	positionScroll = tmpPositionScroll;
