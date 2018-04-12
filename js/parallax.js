@@ -1,9 +1,13 @@
 const INIT_SEP = 1000;
-const DIV_SEP = 2000;
+const DIV_SEP = 1900;
 
 var divOffset = INIT_SEP;
 var i;
 var tmpDivTop = 0;
+
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
 
 window.addEventListener("scroll", showContents);
 
