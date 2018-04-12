@@ -1,11 +1,22 @@
-const FADE_SPEED = 0.4;
+const INIT_SEP = 1000;
+const DIV_SEP = 2000;
+
+var divOffset = INIT_SEP;
+var i;
 
 window.addEventListener("scroll", showContents);
 
 function showContents() 
-{
-	var contents_index = document.getElementsByClassName("content").length - 1; 
+{	
+	var divTop = $(window).scrollTop();
 	
+	if(i == null)
+		i = document.getElementsByClassName("content").length - 1;
 	
-	document.getElementsByClassName("content")[2].textContent = window.scrollTop;
+	if(divTop > divOffset)
+	{
+		document.getElementsByClassName("content")[i].style.opacity = 0;
+		divOffset = divOffset + DIV_SEP;
+		i--;
+	}
 }
